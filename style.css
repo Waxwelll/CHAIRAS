@@ -1,0 +1,183 @@
+
+:root {
+    --text : #ffffff;
+    --border : #11ff00;
+    --seprtr : #5d2089;
+    --Backround : rgb(11, 11, 11);
+    --sepsep : #4bd073;
+    --darksep : #575656;
+    --img : url("IMG/Backround.png");
+}
+
+
+.green {
+    --text : #ffffff;
+    --border : #00ff99;
+    --seprtr : #28ca1a;
+    --Backround : rgb(11, 11, 11);
+    --sepsep : #dbe619;
+    --darksep : #575656;
+    --img : url("IMG/Backround2.png");
+}
+
+
+.redish {
+    --text : #ffffff;
+    --border : #2525be;
+    --seprtr : #cd168a;
+    --Backround : rgb(11, 11, 11);
+    --sepsep : #2525be;
+    --darksep : #575656;
+    --img : url("IMG/Backround3.png");
+}
+
+
+
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Agu';
+  font-style: normal;
+  font-weight: 1000;
+  src: url('Fonts/agu-display-v3-latin-regular.woff2') format('woff2'); 
+}
+
+
+html {
+    /* By default, this is 16px. Setting it to 10px makes everything 
+       using 'rem' or 'em' shrink proportionally. */
+    font-size: 62.5%; 
+}
+
+
+body {
+    background-image: var(--img);   
+    color: var(--text);
+    background-size: 50rem;
+}
+
+button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 10px 20px;
+    font-size: 3rem;
+    background-color: var(--seprtr);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Head h1 {
+    font-family: 'Agu', sans-serif;
+    color: var(--text);
+    font-size: 10em;
+    text-align: center;
+    background-color: var(--Backround);
+    margin-top: -100px;
+    padding-top: 100px;
+    border-bottom: var(--darksep) 3px solid;
+}
+
+h1 {
+    font-family: 'Agu', sans-serif;
+    color: var(--text);
+    font-size: 8em;
+    text-align: center;
+    background-color: var(--seprtr);
+    border-bottom: 5px solid var(--sepsep);
+    border-top: 5px solid var(--sepsep);
+    padding-bottom: 20px;
+
+}
+
+.Chair {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+
+.Chair img {
+    border: var(--border) 10px solid;
+    height: auto;
+    height: 40vh; 
+    width: auto;
+    object-fit: contain;
+}
+
+#Featchair {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    gap: 100px;
+    text-align: center; 
+}
+
+#Chairgallry {
+    display: grid;
+    padding-top: 8rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;   
+    overflow-x: auto;
+    row-gap: 250px;
+}
+
+
+.Chairtext {
+    background-color: var(--Backround);
+    margin-bottom: 18px;
+    border: var(--darksep) 3px solid;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-wrap: balance;
+
+}
+
+.Chair.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#STOP h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+}
+
+#STOP img {
+    display: flex;
+    justify-content: center;;
+    margin: 0 auto;
+    border: var(--border) 5px solid;
+    margin-bottom: 80rem;
+    height: 500px;
+    width: auto;
+}
+
+.end {
+    padding-top: 100rem;
+}
+
+#normalchair img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: var(--darksep) 7px solid;
+    margin-bottom: 100px;
+    height: 400px;
+    width: auto;
+}
+
+#normalchair p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+    padding-bottom: 4rem;
+}
